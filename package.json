@@ -1,0 +1,15 @@
+{
+  "name": "build-sandbox",
+  "version": "1.0.0",
+  "description": "sandbox to play with react build tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Wolf",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7"
+  }
+}
