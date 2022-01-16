@@ -1,4 +1,8 @@
-"use strict";
+import "regenerator-runtime/runtime.js";
+import "core-js/modules/es.array.flat.js";
+import "core-js/modules/es.array.unscopables.flat.js";
+import "core-js/modules/es.object.to-string.js";
+import "core-js/modules/es.promise.js";
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -24,8 +28,9 @@ var App = /*#__PURE__*/_createClass(function App() {
           case 0:
             name = _args.length > 0 && _args[0] !== undefined ? _args[0] : 'World';
             console.log("Hello, ".concat(name));
+            console.log([1, 2, [2, 3]].flat());
 
-          case 2:
+          case 3:
           case "end":
             return _context.stop();
         }
