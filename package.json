@@ -4,7 +4,7 @@
   "description": "sandbox to play with react build tools",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack"
   },
   "author": "Paul Wolf",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "@babel/plugin-transform-template-literals": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
+    "file-loader": "^6.2.0",
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1"
   }
