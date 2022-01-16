@@ -2,10 +2,7 @@
   "presets": [
     ["@babel/env",
       {
-        "debug": true,
-        "targets": [
-          "> 0.3%"
-        ]
+        "debug": true
       }
     ]
   ],
