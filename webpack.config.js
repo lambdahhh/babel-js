@@ -12,14 +12,18 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(s[ca]ss)$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'},
+                    {loader: 'sass-loader'}
+                ]
+            },
+            {
                 test: /\.css$/,
                 use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader'
-                    }
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'}
                 ]
             },
             // load images
