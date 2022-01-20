@@ -11,6 +11,17 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    }
+                ]
+            },
             // load images
             {
                 test: /\.(png|jpg|jpeg|gif|ico)$/,
