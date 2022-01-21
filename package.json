@@ -4,7 +4,8 @@
   "description": "sandbox to play with react build tools",
   "main": "index.js",
   "scripts": {
-    "start": "webpack"
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "author": "Paul Wolf",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.66.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
   }
 }

@@ -61,5 +61,8 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'main-[chunkhash:8].css'
         })
-    ]
+    ],
+    "devServer":{
+        open: true
+    }
 };
