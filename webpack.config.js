@@ -1,8 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const path = require("path");
 
 module.exports = {
     mode: "development",
+    output: {
+        path: path.resolve("dist"),
+    },
     module: {
         rules: [
             {
@@ -26,7 +31,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             outputPath: 'images',
-                            name: '[name]-[sha1:hash:7].[ext]'
+                            name: '[name]-[sha1:chunkhash:7].[ext]'
                         }
                     }
                 ]
@@ -47,13 +52,14 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Hello React World',
             buildTime: new Date().toString(),
             template: 'public/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: 'main-[hash:8].css'
+            filename: 'main-[chunkhash:8].css'
         })
     ]
 };
