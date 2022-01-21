@@ -15,9 +15,10 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
+            // для dev 'style-loader', для прода MiniCssExtractPlugin.loader - на деве не перезагружает
             {
                 test: /\.(s[ca]ss)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.css$/,
@@ -63,6 +64,7 @@ module.exports = {
         })
     ],
     "devServer":{
-        open: true
+        open: true,
+        hot: true
     }
 };
